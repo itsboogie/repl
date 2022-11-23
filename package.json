@@ -1,7 +1,6 @@
 {
-  "name": "node-starter",
+  "name": "repl",
   "version": "0.0.0",
-  "type": "module",
   "jest": {
     "verbose": true,
     "testMatch": [
@@ -14,7 +13,8 @@
   },
   "scripts": {
     "jest:watch": "npx jest --watchAll",
-    "repl": "ts-node index.ts"
+    "repl": "ts-node --esm index.ts",
+    "test": "jest --testFile=index.test.ts --watch"
   },
   "dependencies": {
     "@types/jest": "^27.0.2",

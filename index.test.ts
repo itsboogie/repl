@@ -1,17 +1,10 @@
-import { sum } from './index';
+const doStuff = (input: string) => "expected";
 
-test('basic', () => {
-  expect(sum()).toBe(0);
+it("should do stuff", () => {
+  const input = "lets go";
+  const expectedOutput = "expected";
+
+  // Assert
+  const output = doStuff(input);
+  expect(output).toEqual(expectedOutput);
 });
-
-test('basic again', () => {
-  expect(sum(1, 2)).toBe(3);
-});
-
-test('basic async', async () => {
-  expect(sum()).toBe(0);
-});
-
-test('basic again async', async () => {
-  expect(sum(1, 2)).toBe(3);
-}, 1000 /* optional timeout */);
